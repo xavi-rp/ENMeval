@@ -1,5 +1,6 @@
 ENMevaluate <- function (occ, env, bg.coords = NULL, occ.grp = NULL, bg.grp = NULL, 
                          RMvalues = seq(0.5, 4, 0.5), fc = c("L", "LQ", "H", "LQH", "LQHP", "LQHPT"), 
+                         defaultprevalence=0.5,
                          categoricals = NULL, n.bg = 10000, method = NULL, overlap = FALSE, 
                          aggregation.factor = c(2, 2), kfolds = NA, bin.output = FALSE, clamp = TRUE,
                          rasterPreds = TRUE, parallel = FALSE, numCores = NULL) {
