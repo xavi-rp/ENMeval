@@ -2,9 +2,9 @@
 #########	CREATE MAXENT ARGUMENTS	#############
 #################################################
 
-make.args <- function(RMvalues=seq(0.5, 4, 0.5), fc=c("L", "LQ", "H", "LQH", "LQHP", "LQHPT"), labels=FALSE) {
+make.args <- function(RMvalues=seq(0.5, 4, 0.5), fc=c("L", "LQ", "H", "LQH", "LQHP", "LQHPT"), defaultprevalence=0.5, labels=FALSE) {
 
-	other.args <- c("noaddsamplestobackground", "noremoveDuplicates", "noautofeature")
+	other.args <- c("noaddsamplestobackground", "noremoveDuplicates", "noautofeature", paste0("defaultprevalence=", defaultprevalence))
 	args.list <- list()
 
 	for (i in 1:length(fc)) {
