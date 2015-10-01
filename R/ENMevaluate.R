@@ -12,7 +12,7 @@ ENMevaluate <- function (occ, env, bg.coords = NULL, occ.grp = NULL, bg.grp = NU
   if (is.null(bg.coords)) {
     bg.coords <- randomPoints(env[[1]], n = n.bg)
   }
-  maxent.args <- make.args(RMvalues, fc)
+  maxent.args <- make.args(RMvalues, fc, defaultprevalence)
   args.lab <- make.args(RMvalues, fc, labels = TRUE)
   occ <- as.data.frame(occ)
   colnames(occ) <- c("LON", "LAT")
